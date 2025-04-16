@@ -11,42 +11,42 @@ namespace RedoWeek2
         // The main place to run the program
         static void Main(string[] args)
         {
-            // using a while loolp to run the program until the user chooses to exit
+            // using a while loop to run the program until the user chooses to exit
             while (true) 
             {
                 // Displaying the menu to the user
-                Console.WriteLine("Enter a number 1 - 4 to run witch Excersise, 5 to EXIT");
-                // user inputs their choice of excersise
+                Console.WriteLine("Enter a number 1 - 4 to run witch Exercise, 5 to EXIT");
+                // user inputs their choice of Exercise
                 double choice = Convert.ToDouble(Console.ReadLine());
 
-                // using a switch statement to run the excersise based on the users choice
+                // using a switch statement to run the Exercise based on the users choice
                 switch (choice)
                 {
-                    // case 1 is for excersise 1
+                    // case 1 is for Exercise 1
                     case 1:
-                        // letting the user know which excersise they chose
-                        Console.WriteLine("You chose Excersise 1");
+                        // letting the user know which Exercise they chose
+                        Console.WriteLine("You chose to run Exercise 1");
                         // creating an instance of the Wk2Ex1 class and calling the Run1 method
                         Wk2Ex1 Wk2Ex1 = new Wk2Ex1();
                         Wk2Ex1.Run1();
                         break;
                     case 2:
-                        // letting the user know which excersise they chose
-                        Console.WriteLine("You chose Excersise 2");
+                        // letting the user know which Exercise they chose
+                        Console.WriteLine("You chose to run Exercise 2");
                         // creating an instance of the Wk2Ex2 class and calling the Run2 method
                         Wk2Ex2 Wk2Ex2 = new Wk2Ex2();
                         Wk2Ex2.Run2();
                         break;
                     case 3:
-                        // letting the user know which excersise they chose
-                        Console.WriteLine("You chose Excersise 3");
+                        // letting the user know which Exercise they chose
+                        Console.WriteLine("You chose to run Exercise 3");
                         // creating an instance of the Wk2Ex3 class and calling the Run3 method
                         Wk2Ex3 Wk2Ex3 = new Wk2Ex3();
                         Wk2Ex3.Run3();
                         break;
                     case 4:
-                        // letting the user know which excersise they chose
-                        Console.WriteLine("You chose Excersise 4");
+                        // letting the user know which Exercise they chose
+                        Console.WriteLine("You chose to run Exercise 4");
                         Wk2Ex4 Wk2Ex4 = new Wk2Ex4();
                         // creating an instance of the Wk2Ex4 class and calling the Run4 method
                         Wk2Ex4.Run4();
@@ -62,17 +62,17 @@ namespace RedoWeek2
                 }
             }
         }
-        // creating classe for excersise 1
+        // creating class for Exercise 1
         class Wk2Ex1
         {
-            // creating a method to run the excersise 1
+            // creating a method to run the Exercise 1
             public void Run1()
             {
                 // The title for the program
                 Console.WriteLine("Interest Calculator Program");
                 Console.ReadLine();
 
-                // asking the user to input the Prinipal amount
+                // asking the user to input the Principal amount
                 Console.WriteLine("What is the Principal amount of loan in dollars? ");
                 // user inputs the principal amount
                 double principal = Convert.ToDouble(Console.ReadLine());
@@ -97,10 +97,10 @@ namespace RedoWeek2
                 Console.ReadLine();
             }
         }
-        // creating classe for excersise 2
+        // creating class for Exercise 2
         class Wk2Ex2
         {
-            // creating a method to run the excersise 2
+            // creating a method to run the Exercise 2
             public void Run2()
             {
                 // Asking the user to input the length of the rectangle
@@ -126,36 +126,36 @@ namespace RedoWeek2
                 Console.ReadLine();
             }
         }
-        // creating classe for excersise 3
+        // creating class for Exercise 3
         class Wk2Ex3
         {
-            // creating a method to run the excersise 3
+            // creating a method to run the Exercise 3
             public void Run3()
             {
                 // The title for the program
                 Console.WriteLine("Welcome to Temperature Converter");
 
                 // asking the user to input the temperature in Celsius
-                Console.WriteLine("Enter the temperature in fahrenheit: ");
+                Console.WriteLine("Enter the temperature in Fahrenheit: ");
                 // user inputs the temperature in Celsius
                 double fahrenheit = Convert.ToDouble(Console.ReadLine());
 
                 // converting the temperature from Fahrenheit to Celsius
                 double celsius = (fahrenheit - 32) * 5 / 9;
-                Console.WriteLine(fahrenheit + "in fahrenheit is equivalent to " + celsius + " Celsius.");
+                Console.WriteLine(fahrenheit + "in Fahrenheit is equivalent to " + celsius.ToString("F2") + " Celsius.");
 
                 // spacing out the results with the next line
                 Console.ReadLine();
             }
         }
-        // creating classe for excersise 4
+        // creating class for Exercise 4
         class Wk2Ex4
         {
-            // creating a method to run the excersise 4
+            // creating a method to run the Exercise 4
             public void Run4()
             {
                 // The title for the program
-                Console.WriteLine("Welcome to the Hypotensus Calculator!");
+                Console.WriteLine("Welcome to the Hypotenuses Calculator!");
 
                 // asking the user to input the length of the first side
                 Console.WriteLine("Enter the length of the first side (a): ");
@@ -171,10 +171,11 @@ namespace RedoWeek2
                 double c = Math.Sqrt(a * a + b * b);
 
                 // displaying the results to the user
-                Console.WriteLine("The length of the hypotenuse is: " + c);
+                // Fixing the invalid expression term '{' and formatting the output correctly
+                Console.WriteLine("The length of the hypotenuse is: " + c.ToString("F2"));
 
                 // thanking the user for using the program
-                Console.WriteLine("Thank You for using the Hypotensus Calculator!");
+                Console.WriteLine("Thank You for using the Hypotenuses Calculator!");
 
                 // spacing out the results with the next line
                 Console.ReadLine();
